@@ -24,6 +24,7 @@ int main()
 	filemgr->loadOBJ(
 		cube,
 		"cube.obj",
+		//
 		"goldskin.BMP",
 		"20161614_vs.shader",
 		"20161614_fs.shader"
@@ -39,6 +40,7 @@ int main()
 		//renderer->update(non_render_obj);
 
 		renderer->render(cube);
+
 		//renderer->render(none);
 	}
 
