@@ -6,3 +6,5 @@
 # 업데이트
 
 7주차 과제
+
+7 - 1 : RenderableObject , NonRenderableObject 추가 및 코드 
