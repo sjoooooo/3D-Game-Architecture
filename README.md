@@ -7,4 +7,4 @@
 
 7주차 과제
 
-7 - 1 : RenderableObject , NonRenderableObject 추가 및 코드 수정
+7 - 1 : RenderableObject , NonRenderableObject 추가 및  코드 수정
