@@ -7,6 +7,7 @@
 
 #include "Object.h"
 #include "FileManager.h"
+#include "RenderableObject.h"
 
 #include "include/GL/glew.h"
 

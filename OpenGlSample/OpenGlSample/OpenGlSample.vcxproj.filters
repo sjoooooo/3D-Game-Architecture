@@ -13,15 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-<<<<<<< HEAD
     <Filter Include="헤더 파일들">
-      <UniqueIdentifier>{4185b003-7da5-41ff-a8ba-fb3c71f0a4aa}</UniqueIdentifier>
+      <UniqueIdentifier>{cdd658ad-a699-4957-963e-5312a2c4689f}</UniqueIdentifier>
     </Filter>
     <Filter Include="인터페이스 파일">
-      <UniqueIdentifier>{c8edf8d0-614f-481b-9045-d3416364c910}</UniqueIdentifier>
+      <UniqueIdentifier>{cc9586c7-6a70-42bb-8179-9865c5cdb3d2}</UniqueIdentifier>
     </Filter>
-=======
->>>>>>> parent of de0f6b8... 7 - 1 수정
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="glm\detail\_features.hpp">
@@ -775,24 +772,13 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="FileManager.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
-<<<<<<< HEAD
-    <ClInclude Include="NonRenderableObject.h">
       <Filter>헤더 파일들</Filter>
-=======
-    <ClInclude Include="ICleanUp.h">
-      <Filter>소스 파일</Filter>
->>>>>>> parent of de0f6b8... 7 - 1 수정
     </ClInclude>
     <ClInclude Include="Object.h">
-      <Filter>소스 파일</Filter>
+      <Filter>헤더 파일들</Filter>
     </ClInclude>
     <ClInclude Include="Renderer.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Sphere.h">
-      <Filter>소스 파일</Filter>
+      <Filter>헤더 파일들</Filter>
     </ClInclude>
     <ClInclude Include="ICleanUp.h">
       <Filter>인터페이스 파일</Filter>
@@ -802,6 +788,15 @@
     </ClInclude>
     <ClInclude Include="IUpdater.h">
       <Filter>인터페이스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderableObject.h">
+      <Filter>헤더 파일들</Filter>
+    </ClInclude>
+    <ClInclude Include="NonRenderableObject.h">
+      <Filter>헤더 파일들</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.h">
+      <Filter>헤더 파일들</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1221,6 +1216,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Renderer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderableObject.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="NonRenderableObject.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Sphere.cpp">

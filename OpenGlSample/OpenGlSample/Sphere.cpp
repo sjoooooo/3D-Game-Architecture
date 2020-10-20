@@ -33,7 +33,7 @@ Sphere::Sphere(FileManager* filepath)
 
 void Sphere::SetSpherePosition(float x, float y, float z)
 {
-	x = 0.0f, y = 0.0f, z = 0.0f;
+	SphereX = x, SphereY = y, SphereZ = z;
 }
 
 void Sphere::shutDown()
