@@ -2,7 +2,7 @@
 
 #include "Object.h"
 
-class SampleNonRenderObj : public Object
+class SampleNonRenderObj : public NonRenderableObject
 {
 public:
 	int idData;
@@ -10,5 +10,5 @@ public:
 public:
 	virtual void shutDown() override {}
 public:
-	//virtual void update() override {}
+	virtual void update() override {}
 };
