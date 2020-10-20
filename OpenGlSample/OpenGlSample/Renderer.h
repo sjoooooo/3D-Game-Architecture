@@ -1,24 +1,19 @@
-#pragma once
 #ifndef __RENDERER_H__
 #define __RENDERER_H__
 
 #include "ICleanUp.h"
 #include "IUpdater.h"
+#include "IRenderer.h"
 
 struct GLFWwindow;
+
 class Object;
 class RenderableObject;
 
-class Renderer : public ICleanUp, public IUpdater
+class Renderer : public ICleanUp
 {
 private:
 	GLFWwindow* window;
-
-	// Obj를 한번에 렌더하기 위한 리스트
-	std::vector<RenderableObject*> Obj_List;
-
-public:
-	GLFWwindow* GetWindow() const { return window; }
 
 public:
 	static Renderer* instance()
@@ -27,20 +22,17 @@ public:
 
 		return &instance;
 	}
-public:
-	glm::mat4 getPosition(glm::mat4 Model, RenderableObject* src_obj);
 
 public:
+	GLFWwindow* GetWindow() const { return window; }
+
+public:
+
 	void render(RenderableObject* src_obj);
-	void renderObj();
-	void addObject(RenderableObject* render_obj);
+	//void update(IUpdater* src_obj);
+	//void addObject(IRenderer* render_obj);
+
 	void init();
-
-	void renderglClear();
-	void renderSwap();
-	void Obj_Shutdown(RenderableObject* src_obj);
-
-	virtual void Update(IUpdater *Iupdater) override;
 	virtual void shutDown() override;
 };
 

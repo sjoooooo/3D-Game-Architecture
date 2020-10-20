@@ -24,7 +24,6 @@ public:
 	GLuint LightID;
 
 public:
-
 	// 설정할 좌표를 받아올 X Y Z
 	float PosX, PosY, PosZ;
 

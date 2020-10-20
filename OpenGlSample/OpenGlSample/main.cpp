@@ -7,8 +7,6 @@
 #include "Object.h"
 #include "FileManager.h"
 #include "Renderer.h"
-#include "RenderableObject.h"
-#include "NonRenderableObject.h"
 #include "Sphere.h"
 
 int main()
@@ -18,41 +16,54 @@ int main()
 	Renderer* renderer = Renderer::instance();
 	renderer->init();
 
-	Sphere* sphere = new Sphere(filemgr);
-	renderer->addObject(sphere);
-	sphere->SetPosition(-1.0f, 0.0f, 0.0f);
-
 	RenderableObject* cube = new RenderableObject();
-	renderer->addObject(cube);
-	cube->SetPosition(1.0f, 0.0f, 0.0f);
+	//renderer->addObject(cube);
+
+<<<<<<< HEAD
+	cube->SetPosition(0.0f, 0.0f, 0.0f);
+=======
+	
+>>>>>>> parent of de0f6b8... 7 - 1 수정
 
 	filemgr->loadOBJs(
 		cube,
 		"cube.obj",
+		//
 		"goldskin.BMP",
 		"20161614_vs.shader",
 		"20161614_fs.shader"
 	);
 
+<<<<<<< HEAD
+	Sphere* sphere = new Sphere(filemgr);
+=======
+	Sphere* sphere = new Sphere();
+	//renderer->addObject(sphere);
+>>>>>>> parent of de0f6b8... 7 - 1 수정
 
 	NonRenderableObject* non_render_obj = new NonRenderableObject();
 
 	while (true)
 	{
-		renderer->renderglClear();
+		renderer->render(cube);
 
-		renderer->renderObj();
-		renderer->Update(non_render_obj);
+<<<<<<< HEAD
+		renderer->render(sphere);
 
-		renderer->renderSwap();
+=======
+		renderer->render(cube);
 
+		//renderer->render(none);
+>>>>>>> parent of de0f6b8... 7 - 1 수정
 	}
 
 	renderer->shutDown();
+	cube->shutDown();
+	sphere->shutDown();
 
+	//delete renderer;
 	delete cube;
 	delete sphere;
-	delete renderer;
-
+	
 	return 0;
 }

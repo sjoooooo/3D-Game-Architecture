@@ -2,8 +2,6 @@
 
 #include "Object.h"
 #include "Renderer.h"
-#include "RenderableObject.h"
-#include "NonRenderableObject.h"
 
 #include "include/GL/glew.h"
 #include "include/GLFW/glfw3.h" 
@@ -48,12 +46,14 @@ void Renderer::init()
 	// Ensure we can capture the escape key being pressed below
 	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
 
+	//glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
 	// Set the mouse at the center of the screen
 	glfwPollEvents();
 	glfwSetCursorPos(window, 1024 / 2, 768 / 2);
 
 	// Dark blue background
-	glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
+	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
 
 	// Enable depth test
 	glEnable(GL_DEPTH_TEST);
@@ -66,6 +66,9 @@ void Renderer::init()
 
 void Renderer::render(RenderableObject* src_obj)
 {
+	// Clear the screen
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
 	// Use our shader
 	glUseProgram(src_obj->programID);
 
@@ -79,7 +82,6 @@ void Renderer::render(RenderableObject* src_obj)
 	);
 
 	glm::mat4 ModelMatrix = glm::mat4(1.0);
-	ModelMatrix = getPosition(ModelMatrix, src_obj);
 
 	glm::mat4 MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
 
@@ -143,64 +145,23 @@ void Renderer::render(RenderableObject* src_obj)
 	glDisableVertexAttribArray(0);
 	glDisableVertexAttribArray(1);
 	glDisableVertexAttribArray(2);
-}
 
-void Renderer::Update(IUpdater* Iupdater)
-{
-
-}
-
-
-void Renderer::addObject(RenderableObject* render_obj)
-{
-	Obj_List.push_back(render_obj);
-}
-
-void Renderer::renderObj()
-{
-	for (int i = 0; i < Obj_List.size(); i++)
-	{
-		render(Obj_List[i]);
-	}
-}
-
-void Renderer::renderglClear()
-{
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-}
-
-void Renderer::renderSwap()
-{
-	glfwSwapBuffers(GetWindow());
+	// Swap buffers
+	glfwSwapBuffers(window);
 	glfwPollEvents();
 }
 
-glm::mat4 Renderer::getPosition(glm::mat4 Model, RenderableObject* src_obj)
-{
-	float x, y, z;
-	x = src_obj->PosX;
-	y = src_obj->PosY;
-	z = src_obj->PosZ;
-
-	Model = glm::translate(Model, glm::vec3(x, y, z));
-	return Model;
-}
-
-void Renderer::Obj_Shutdown(RenderableObject* src_obj)
-{
-	src_obj->shutDown();
-}
+//void Renderer::update(IUpdater* src_obj)
+//{
+//	src_obj->update();
+//}
+//
+//void Renderer::addObject(IRenderer* render_obj)
+//{
+//
+//}
 
 void Renderer::shutDown()
 {
-	for (int i = 0; i < Obj_List.size(); i++)
-	{
-		Obj_Shutdown(Obj_List[i]);
-	}
 	glfwTerminate();
 }
-
-//void Renderer::shutDown()
-//{
-//	glfwTerminate();
-//}
