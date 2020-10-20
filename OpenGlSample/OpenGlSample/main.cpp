@@ -7,6 +7,8 @@
 #include "Object.h"
 #include "FileManager.h"
 #include "Renderer.h"
+#include "RenderableObject.h"
+#include "NonRenderableObject.h"
 #include "Sphere.h"
 
 int main()
@@ -17,27 +19,27 @@ int main()
 	renderer->init();
 
 	RenderableObject* cube = new RenderableObject();
-	//renderer->addObject(cube);
 
-	
+	cube->SetPosition(0, 0, 0);
 
 	filemgr->loadOBJ(
 		cube,
 		"cube.obj",
-		//
 		"goldskin.BMP",
 		"20161614_vs.shader",
 		"20161614_fs.shader"
 	);
 
 	Sphere* sphere = new Sphere();
-	//renderer->addObject(sphere);
+
 
 	NonRenderableObject* non_render_obj = new NonRenderableObject();
 
 	while (true)
 	{
 		//renderer->update(non_render_obj);
+
+		renderer->render(sphere);
 
 		renderer->render(cube);
 

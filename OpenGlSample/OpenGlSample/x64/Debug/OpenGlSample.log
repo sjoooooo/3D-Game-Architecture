@@ -1,9 +1,19 @@
 ﻿  FileManager.cpp
   main.cpp
-  Object.cpp
+  NonRenderableObject.cpp
+c:\users\public\3d-game-architecture\openglsample\openglsample\nonrenderableobject.cpp(9): error C2084: 'void NonRenderableObject::shutDown(void)' 함수에 이미 본문이 있습니다.
+  c:\users\public\3d-game-architecture\openglsample\openglsample\nonrenderableobject.h(11): note: 'shutDown'의 이전 정의를 참조하십시오.
+  RenderableObject.cpp
+c:\users\public\3d-game-architecture\openglsample\openglsample\renderableobject.cpp(4): error C2084: 'void RenderableObject::shutDown(void)' 함수에 이미 본문이 있습니다.
+  c:\users\public\3d-game-architecture\openglsample\openglsample\renderableobject.h(34): note: 'shutDown'의 이전 정의를 참조하십시오.
   Renderer.cpp
-c:\users\public\3d-game-architecture\openglsample\openglsample\renderer.cpp(143): warning C4267: '인수': 'size_t'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\public\3d-game-architecture\openglsample\openglsample\renderer.h(26): error C2061: 구문 오류: 식별자 'RenderableObject'
+c:\users\public\3d-game-architecture\openglsample\openglsample\renderer.cpp(70): error C2511: 'void Renderer::render(RenderableObject *)': 오버로드된 멤버 함수가 'Renderer'에 없습니다.
+  c:\users\public\3d-game-architecture\openglsample\openglsample\renderer.h(11): note: 'Renderer' 선언을 참조하십시오.
+c:\users\public\3d-game-architecture\openglsample\openglsample\renderer.cpp(145): warning C4267: '인수': 'size_t'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\public\3d-game-architecture\openglsample\openglsample\renderer.cpp(152): error C2597: 비정적 멤버 'Renderer::window'에 대한 참조가 잘못되었습니다.
   Sphere.cpp
+c:\users\public\3d-game-architecture\openglsample\openglsample\sphere.h(7): error C2504: 'RenderableObject': 기본 클래스를 정의하지 않았습니다.
+c:\users\public\3d-game-architecture\openglsample\openglsample\sphere.h(10): error C3668: 'Sphere::shutDown': 재정의 지정자 'override'가 있는 메서드가 기본 클래스 메서드를 재정의하지 않았습니다.
+c:\users\public\3d-game-architecture\openglsample\openglsample\sphere.cpp(5): error C2653: 'RenderableObject': 클래스 또는 네임스페이스 이름이 아닙니다.
   코드를 생성하고 있습니다...
-MSVCRTD.lib(initializers.obj) : warning LNK4098: 'msvcrt.lib' defaultlib가 다른 라이브러리와 충돌합니다. /NODEFAULTLIB:library를 사용하십시오.
-  OpenGlSample.vcxproj -> C:\Users\Public\3D-Game-Architecture\OpenGlSample\x64\Debug\OpenGlSample.exe

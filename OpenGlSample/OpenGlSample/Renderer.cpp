@@ -2,6 +2,8 @@
 
 #include "Object.h"
 #include "Renderer.h"
+#include "RenderableObject.h"
+#include "NonRenderableObject.h"
 
 #include "include/GL/glew.h"
 #include "include/GLFW/glfw3.h" 

@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="헤더 파일들">
+      <UniqueIdentifier>{4185b003-7da5-41ff-a8ba-fb3c71f0a4aa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="glm\detail\_features.hpp">
@@ -766,19 +769,34 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="FileManager.h">
-      <Filter>소스 파일</Filter>
+      <Filter>헤더 파일들</Filter>
     </ClInclude>
     <ClInclude Include="ICleanUp.h">
-      <Filter>소스 파일</Filter>
+      <Filter>헤더 파일들</Filter>
+    </ClInclude>
+    <ClInclude Include="IRenderer.h">
+      <Filter>헤더 파일들</Filter>
+    </ClInclude>
+    <ClInclude Include="IUpdater.h">
+      <Filter>헤더 파일들</Filter>
+    </ClInclude>
+    <ClInclude Include="NonRenderableObject.h">
+      <Filter>헤더 파일들</Filter>
     </ClInclude>
     <ClInclude Include="Object.h">
-      <Filter>소스 파일</Filter>
+      <Filter>헤더 파일들</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderableObject.h">
+      <Filter>헤더 파일들</Filter>
     </ClInclude>
     <ClInclude Include="Renderer.h">
-      <Filter>소스 파일</Filter>
+      <Filter>헤더 파일들</Filter>
+    </ClInclude>
+    <ClInclude Include="SampleNonRenderObj.h">
+      <Filter>헤더 파일들</Filter>
     </ClInclude>
     <ClInclude Include="Sphere.h">
-      <Filter>소스 파일</Filter>
+      <Filter>헤더 파일들</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1201,6 +1219,15 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Sphere.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderableObject.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="NonRenderableObject.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SampleNonRenderObj.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

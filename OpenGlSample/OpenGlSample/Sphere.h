@@ -2,6 +2,7 @@
 #define __SPHERE_H_
 
 #include "Object.h"
+#include "RenderableObject.h"
 
 class Sphere : public RenderableObject
 {
