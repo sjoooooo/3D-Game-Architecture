@@ -9,4 +9,6 @@
 
 7 - 1 : RenderableObject , NonRenderableObject 추가 및  코드 수정
 
-7 - 2 : Sphere 및 코드 
+7 - 2 : Sphere 및 코드 수정 
+
+
