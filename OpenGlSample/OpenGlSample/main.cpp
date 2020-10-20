@@ -20,9 +20,9 @@ int main()
 
 	RenderableObject* cube = new RenderableObject();
 
-	cube->SetPosition(0, 0, 0);
+	cube->SetPosition(0.0f, 0.0f, 0.0f);
 
-	filemgr->loadOBJ(
+	filemgr->loadOBJs(
 		cube,
 		"cube.obj",
 		"goldskin.BMP",
@@ -30,30 +30,25 @@ int main()
 		"20161614_fs.shader"
 	);
 
-	Sphere* sphere = new Sphere();
-
+	Sphere* sphere = new Sphere(filemgr);
 
 	NonRenderableObject* non_render_obj = new NonRenderableObject();
 
 	while (true)
 	{
-		//renderer->update(non_render_obj);
+		renderer->render(cube);
 
 		renderer->render(sphere);
 
-		renderer->render(cube);
-
-		//renderer->render(none);
 	}
 
 	renderer->shutDown();
+	cube->shutDown();
+	sphere->shutDown();
 
-	delete non_render_obj;
-
+	//delete renderer;
 	delete cube;
 	delete sphere;
-	delete renderer;
-
-
+	
 	return 0;
 }

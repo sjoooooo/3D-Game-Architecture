@@ -16,6 +16,9 @@
     <Filter Include="헤더 파일들">
       <UniqueIdentifier>{4185b003-7da5-41ff-a8ba-fb3c71f0a4aa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="인터페이스 파일">
+      <UniqueIdentifier>{c8edf8d0-614f-481b-9045-d3416364c910}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="glm\detail\_features.hpp">
@@ -771,15 +774,6 @@
     <ClInclude Include="FileManager.h">
       <Filter>헤더 파일들</Filter>
     </ClInclude>
-    <ClInclude Include="ICleanUp.h">
-      <Filter>헤더 파일들</Filter>
-    </ClInclude>
-    <ClInclude Include="IRenderer.h">
-      <Filter>헤더 파일들</Filter>
-    </ClInclude>
-    <ClInclude Include="IUpdater.h">
-      <Filter>헤더 파일들</Filter>
-    </ClInclude>
     <ClInclude Include="NonRenderableObject.h">
       <Filter>헤더 파일들</Filter>
     </ClInclude>
@@ -797,6 +791,15 @@
     </ClInclude>
     <ClInclude Include="Sphere.h">
       <Filter>헤더 파일들</Filter>
+    </ClInclude>
+    <ClInclude Include="ICleanUp.h">
+      <Filter>인터페이스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="IRenderer.h">
+      <Filter>인터페이스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="IUpdater.h">
+      <Filter>인터페이스 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

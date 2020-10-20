@@ -31,7 +31,7 @@ public:
 	void SetPosition(float x, float y, float z);
 
 public:
-	virtual void shutDown() override {};
+	virtual void shutDown() override;
 
 };
 

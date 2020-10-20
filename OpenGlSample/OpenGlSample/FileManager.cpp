@@ -15,7 +15,7 @@
 #define FOURCC_DXT3 0x33545844 // Equivalent to "DXT3" in ASCII
 #define FOURCC_DXT5 0x35545844 // Equivalent to "DXT5" in ASCII
 
-void FileManager::loadOBJ(
+void FileManager::loadOBJs(
 	RenderableObject* target_obj,
 	std::string obj_path,
 	std::string texture_path,

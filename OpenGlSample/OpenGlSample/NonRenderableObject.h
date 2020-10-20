@@ -5,10 +5,8 @@
 class NonRenderableObject : public Object
 {
 public:
-	NonRenderableObject();
-	~NonRenderableObject() {}
 
-	virtual void shutDown() override {};
+	virtual void shutDown() override;
 
 };
 

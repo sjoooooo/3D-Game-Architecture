@@ -6,7 +6,9 @@
 #include "IRenderer.h"
 
 struct GLFWwindow;
+
 class Object;
+class RenderableObject;
 
 class Renderer : public ICleanUp
 {
@@ -20,6 +22,9 @@ public:
 
 		return &instance;
 	}
+
+public:
+	GLFWwindow* GetWindow() const { return window; }
 
 public:
 
